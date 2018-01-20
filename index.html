@@ -11,7 +11,13 @@
 <body>
 	<p>Yoooooo!!!!</p>
 	<noscript><p>Unfortunately, this page requires JavaScript to run properly. Good call disabling it though.</p></noscript>
-	<canvas id='game_canvas' width='800px' height='600px'>
+	<input id='show_grid_cb' type='checkbox'>Show grid.</input>
+	<div id='sprite_select'>
+		<input id="sprite_input" type="radio" name="sprite_radio" value='-1' checked onclick='spritePaintingData.currentlySelectedSprite=parseInt(this.value);'/>
+		<label class="sprite_item" style='border-style: dotted;' for="sprite_input"></label>
+	</div>
+	<br />
+	<canvas id='game_canvas' width='960px' height='640px'>
 		<p>Ah whoops! Canvas rendering seems to be disabled...</p>
 	</canvas>
 </body>

@@ -1,3 +1,44 @@
 * {
 	line-height: 140%;
 }
+
+#game_canvas {
+	border: 1px solid #333;
+}
+
+#sprite_select input{
+	position:absolute;
+	z-index:999;
+}
+
+#sprite_select input:active  + .sprite_item,
+#sprite_select input:active  + .sprite_item {
+	opacity: .9;
+}
+#sprite_select input:checked + .sprite_item,
+#sprite_select input:checked + .sprite_item {
+	-webkit-filter: none;
+	   -moz-filter: none;
+			filter: none;
+}
+
+.sprite_item {
+	cursor:pointer;
+	display:inline-block;
+	background-size:contain;
+	width:72px;height:64px;
+	background-repeat:no-repeat;
+	-webkit-transition: all 50ms ease-in;
+	   -moz-transition: all 50ms ease-in;
+			transition: all 50ms ease-in;
+	-webkit-filter: brightness(1.4) grayscale(1) opacity(.7);
+	   -moz-filter: brightness(1.4) grayscale(1) opacity(.7);
+			filter: brightness(1.4) grayscale(1) opacity(.7);
+}
+
+.sprite_item:hover {
+	-webkit-filter: brightness(1.2) grayscale(.7) opacity(.9);
+	   -moz-filter: brightness(1.2) grayscale(.7) opacity(.9);
+			filter: brightness(1.2) grayscale(.7) opacity(.9);
+}
+
